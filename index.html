@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,20 +14,30 @@
 
   <header>
     <nav>
-      <a href="/" class="logo">Sonakshi Jamadhiar</a>
+
+      <a href="index.html" class="logo">
+        Sonakshi Jamadhiar
+      </a>
 
       <div class="nav-links">
         <a href="#work">Work</a>
         <a href="#about">About</a>
         <a href="resume.pdf">Resume</a>
       </div>
+
     </nav>
   </header>
 
+
   <main>
 
+    <!-- HERO -->
+
     <section class="hero">
-      <p class="eyebrow">HCI · Product · UX Research</p>
+
+      <p class="eyebrow">
+        HCI · Product · UX Research
+      </p>
 
       <h1>
         Hi, I'm Sonakshi.
@@ -36,25 +47,101 @@
         I research and design digital products that make complex
         systems easier to understand and use.
       </p>
+
     </section>
 
-    <section id="work">
-      <h2>Selected Work</h2>
 
-      <article class="project">
-        <h3>Aereo</h3>
-        <p>Understanding GIS analyst workflows for a geospatial platform.</p>
-        <a href="#">View case study →</a>
-      </article>
+    <!-- SELECTED WORK -->
 
-      <article class="project">
-        <h3>BrainSightAI</h3>
-        <p>Designing clearer clinician-facing healthcare experiences.</p>
-        <a href="#">View case study →</a>
-      </article>
+    <section id="work" class="work-section">
+
+      <div class="section-heading">
+
+        <p class="eyebrow">
+          Selected Work
+        </p>
+
+        <h2>Projects</h2>
+
+      </div>
+
+
+      <!-- AEREO -->
+
+      <a href="projects/aereo.html" class="project-card">
+
+        <div class="project-image">
+
+          <img
+            src="assets/images/aereo-cover.jpg"
+            alt="Aereo project preview"
+          >
+
+        </div>
+
+        <div class="project-content">
+
+          <p class="project-type">
+            UX Research · Product
+          </p>
+
+          <h3>Aereo</h3>
+
+          <p class="project-description">
+            Understanding GIS analysts' end-to-end workflows to help
+            inform the design of a geospatial platform.
+          </p>
+
+          <span class="project-link">
+            View case study →
+          </span>
+
+        </div>
+
+      </a>
+
+
+      <!-- BRAINSIGHTAI -->
+
+      <a href="projects/brainsight.html" class="project-card">
+
+        <div class="project-image">
+
+          <img
+            src="assets/images/brainsight-cover.jpg"
+            alt="BrainSightAI project preview"
+          >
+
+        </div>
+
+        <div class="project-content">
+
+          <p class="project-type">
+            Product Design · Healthcare
+          </p>
+
+          <h3>BrainSightAI</h3>
+
+          <p class="project-description">
+            Designing clearer clinician-facing experiences for complex
+            neurological data and patient reports.
+          </p>
+
+          <span class="project-link">
+            View case study →
+          </span>
+
+        </div>
+
+      </a>
+
     </section>
+
+
+    <!-- ABOUT -->
 
     <section id="about">
+
       <h2>About</h2>
 
       <p>
@@ -62,15 +149,21 @@
         University of Maryland with experience across UX research,
         product design, and product management.
       </p>
+
     </section>
 
   </main>
 
+
   <footer>
-    <p>Designed and coded by Sonakshi Jamadhiar.</p>
-  </footer>
+  <p>
+    © <span id="year"></span> Sonakshi Jamadhiar. Designed and coded by me.
+  </p>
+</footer>
+
 
   <script src="script.js"></script>
 
 </body>
+
 </html>
