@@ -1,169 +1,112 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-  <title>Sonakshi Jamadhiar</title>
-
-  <link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sonakshi Jamadhiar — Portfolio (work in progress)</title>
+<meta name="description" content="Sonakshi Jamadhiar — designer working across UX research, product design, and human–AI interaction. Portfolio redesign in progress.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0;background:#FFF1F5;font-family:'Nunito',system-ui,sans-serif;color:#3B1F3A}
+a{color:#B4234A}a:hover{color:#7E1533}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
+@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(0.1)}}
+@keyframes wiggle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
+@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.1)}}
+@keyframes stripes{from{background-position:0 0}to{background-position:40px 0}}
+@keyframes roll{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
+.bot{animation:bob 3.2s ease-in-out infinite}
+.eye{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}
+.antenna{transform-box:fill-box;transform-origin:bottom center;animation:wiggle 1.8s ease-in-out infinite}
+.roller{animation:roll 1.6s ease-in-out infinite}
+.spark{animation:twinkle 2.4s ease-in-out infinite}
+.spark.d1{animation-delay:.6s}.spark.d2{animation-delay:1.2s}.spark.d3{animation-delay:1.8s}
+.bar{background-image:repeating-linear-gradient(-45deg,#F06C8B 0 10px,#F58AA3 10px 20px);background-size:40px 40px;animation:stripes 1.2s linear infinite}
+.pill:hover{transform:translateY(-2px)}
+@media (prefers-reduced-motion:reduce){.bot,.eye,.antenna,.roller,.spark,.bar{animation:none}}
+</style>
 </head>
-
 <body>
+<main style="min-height: 100vh; box-sizing: border-box; padding: 48px 24px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden">
 
-  <header>
-    <nav>
+<svg class="spark" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" style="position: absolute; top: 12%; left: 10%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#FFC94D"></path></svg>
+<svg class="spark d1" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" style="position: absolute; top: 22%; right: 14%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#9AD9C0"></path></svg>
+<svg class="spark d2" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="position: absolute; bottom: 16%; left: 16%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#C7B6FF"></path></svg>
+<svg class="spark d3" aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" style="position: absolute; bottom: 10%; right: 9%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#F58AA3"></path></svg>
+<div aria-hidden="true" style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: #FFE3EC; top: -140px; right: -120px"></div>
+<div aria-hidden="true" style="position: absolute; width: 300px; height: 300px; border-radius: 50%; background: #E9FFF5; bottom: -110px; left: -90px"></div>
 
-      <a href="index.html" class="logo">
-        Sonakshi Jamadhiar
-      </a>
+<div style="position: relative; width: 100%; max-width: 720px; background: #FFFFFF; border: 3px solid #3B1F3A; border-radius: 32px; box-shadow: 10px 10px 0 #3B1F3A; padding: 40px 32px 36px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
 
-      <div class="nav-links">
-        <a href="#work">Work</a>
-        <a href="#about">About</a>
-        <a href="resume.pdf">Resume</a>
-      </div>
+<div style="display: inline-flex; align-items: center; gap: 8px; background: #FFF6D6; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.04em">
+<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M4 20l3-12h10l3 12"></path><path d="M9 8V5a3 3 0 0 1 6 0v3"></path></svg>
+A WORK IN PROGRESS
+</div>
 
-    </nav>
-  </header>
+<svg class="bot" role="img" aria-label="A little robot in a hard hat painting the page" width="220" height="200" viewBox="0 0 220 200">
+<g class="antenna"><line x1="110" y1="44" x2="110" y2="22" stroke="#3B1F3A" stroke-width="4" stroke-linecap="round"></line><circle cx="110" cy="18" r="8" fill="#F06C8B" stroke="#3B1F3A" stroke-width="3"></circle></g>
+<path d="M58 62 Q110 18 162 62 Z" fill="#FFC94D" stroke="#3B1F3A" stroke-width="4" stroke-linejoin="round"></path>
+<rect x="50" y="58" width="120" height="12" rx="6" fill="#FFC94D" stroke="#3B1F3A" stroke-width="4"></rect>
+<rect x="56" y="70" width="108" height="82" rx="28" fill="#C7B6FF" stroke="#3B1F3A" stroke-width="4"></rect>
+<rect x="70" y="84" width="80" height="50" rx="20" fill="#FFFFFF" stroke="#3B1F3A" stroke-width="3"></rect>
+<ellipse class="eye" cx="94" cy="106" rx="6" ry="8" fill="#3B1F3A"></ellipse>
+<ellipse class="eye" cx="126" cy="106" rx="6" ry="8" fill="#3B1F3A"></ellipse>
+<circle cx="96" cy="103" r="2" fill="#FFFFFF"></circle><circle cx="128" cy="103" r="2" fill="#FFFFFF"></circle>
+<ellipse cx="82" cy="120" rx="6" ry="4" fill="#F7A6BA"></ellipse><ellipse cx="138" cy="120" rx="6" ry="4" fill="#F7A6BA"></ellipse>
+<path d="M104 120 Q110 126 116 120" fill="none" stroke="#3B1F3A" stroke-width="3" stroke-linecap="round"></path>
+<rect x="82" y="152" width="56" height="30" rx="12" fill="#9AD9C0" stroke="#3B1F3A" stroke-width="4"></rect>
+<circle cx="110" cy="167" r="5" fill="#F06C8B" stroke="#3B1F3A" stroke-width="2.5"></circle>
+<g class="roller">
+<line x1="164" y1="120" x2="190" y2="92" stroke="#3B1F3A" stroke-width="4" stroke-linecap="round"></line>
+<rect x="176" y="70" width="36" height="20" rx="8" fill="#F06C8B" stroke="#3B1F3A" stroke-width="4"></rect>
+</g>
+<path d="M50 128 Q34 132 30 146" fill="none" stroke="#3B1F3A" stroke-width="4" stroke-linecap="round"></path>
+<circle cx="30" cy="150" r="7" fill="#C7B6FF" stroke="#3B1F3A" stroke-width="3"></circle>
+<circle cx="164" cy="122" r="7" fill="#C7B6FF" stroke="#3B1F3A" stroke-width="3"></circle>
+</svg>
 
+<div style="display: flex; flex-direction: column; gap: 10px">
+<h1 style="margin: 0; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 54px); line-height: 1.05; color: #3B1F3A">Hi, I'm Sonakshi.</h1>
+<p style="margin: 0; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: clamp(22px, 3.4vw, 28px); line-height: 1.2; color: #D6335E">I design for people, not just screens.</p>
+</div>
 
-  <main>
+<p style="margin: 0; max-width: 560px; font-size: 17px; line-height: 1.6; color: #5C4159">I'm a designer with a background in computer science, working across UX research, product design, and human–AI interaction. I'm interested in how people think, make decisions, and navigate technology — and how we can make those experiences better.</p>
 
-    <!-- HERO -->
+<p style="margin: 0; max-width: 520px; font-size: 17px; line-height: 1.5; font-weight: 700; color: #3B1F3A">The portfolio is getting a redesign. The work is already happening.</p>
 
-    <section class="hero">
+<div style="width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 8px">
+<div style="display: flex; justify-content: space-between; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 14px; color: #3B1F3A"><span>Still putting things together</span><span>72%</span></div>
+<div role="progressbar" aria-label="Portfolio progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72" style="height: 22px; background: #FFF1F5; border: 3px solid #3B1F3A; border-radius: 999px; overflow: hidden">
+<div class="bar" style="height: 100%; width: 72%; border-right: 3px solid #3B1F3A; border-radius: 999px"></div>
+</div>
+</div>
 
-      <p class="eyebrow">
-        HCI · Product · UX Research
-      </p>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
+<span style="background: #FFE3EC; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px">UX research &amp; design</span>
+<span style="background: #EFE9FF; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px">Human–AI interaction</span>
+<span style="background: #E9FFF5; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px">Things I'm exploring</span>
+</div>
 
-      <h1>
-        Hi, I'm Sonakshi.
-      </h1>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px">
+<a class="pill" href="mailto:sonakshi1103@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; background: #3B1F3A; color: #FFFFFF; border: 3px solid #3B1F3A; border-radius: 999px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3 7l9 6 9-6"></path></svg>
+Get in touch
+</a>
+<a class="pill" href="https://www.linkedin.com/in/sonakshi-jamadhiar/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; background: #FFFFFF; color: #3B1F3A; border: 3px solid #3B1F3A; border-radius: 999px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M8 11v5"></path><path d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 0 0-4 0"></path></svg>
+LinkedIn
+</a>
+<a class="pill" href="Sonakshi_Jamadhiar_Resume.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; background: #FFF6D6; color: #3B1F3A; border: 3px solid #3B1F3A; border-radius: 999px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h4"></path></svg>
+Résumé
+</a>
+</div>
 
-      <p class="intro">
-        I research and design digital products that make complex
-        systems easier to understand and use.
-      </p>
+<p style="margin: 0; font-size: 15px; color: #5C4159"><a href="mailto:sonakshi1103@gmail.com" style="font-weight: 700">sonakshi1103@gmail.com</a></p>
 
-    </section>
-
-
-    <!-- SELECTED WORK -->
-
-    <section id="work" class="work-section">
-
-      <div class="section-heading">
-
-        <p class="eyebrow">
-          Selected Work
-        </p>
-
-        <h2>Projects</h2>
-
-      </div>
-
-
-      <!-- AEREO -->
-
-      <a href="projects/aereo.html" class="project-card">
-
-        <div class="project-image">
-
-          <img
-            src="assets/images/aereo-cover.jpg"
-            alt="Aereo project preview"
-          >
-
-        </div>
-
-        <div class="project-content">
-
-          <p class="project-type">
-            UX Research · Product
-          </p>
-
-          <h3>Aereo</h3>
-
-          <p class="project-description">
-            Understanding GIS analysts' end-to-end workflows to help
-            inform the design of a geospatial platform.
-          </p>
-
-          <span class="project-link">
-            View case study →
-          </span>
-
-        </div>
-
-      </a>
-
-
-      <!-- BRAINSIGHTAI -->
-
-      <a href="projects/brainsight.html" class="project-card">
-
-        <div class="project-image">
-
-          <img
-            src="assets/images/brainsight-cover.jpg"
-            alt="BrainSightAI project preview"
-          >
-
-        </div>
-
-        <div class="project-content">
-
-          <p class="project-type">
-            Product Design · Healthcare
-          </p>
-
-          <h3>BrainSightAI</h3>
-
-          <p class="project-description">
-            Designing clearer clinician-facing experiences for complex
-            neurological data and patient reports.
-          </p>
-
-          <span class="project-link">
-            View case study →
-          </span>
-
-        </div>
-
-      </a>
-
-    </section>
-
-
-    <!-- ABOUT -->
-
-    <section id="about">
-
-      <h2>About</h2>
-
-      <p>
-        I'm a Human-Computer Interaction master's student at the
-        University of Maryland with experience across UX research,
-        product design, and product management.
-      </p>
-
-    </section>
-
-  </main>
-
-
-  <footer>
-  <p>
-    © <span id="year"></span> Sonakshi Jamadhiar. Designed and coded by me.
-  </p>
-</footer>
-
-
-  <script src="script.js"></script>
-
+<p style="margin: 4px 0 0; font-size: 13px; color: #6E5470">Curious about something? So am I.</p>
+</div>
+</main>
 </body>
-
 </html>
