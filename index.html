@@ -1,112 +1,233 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Sonakshi Jamadhiar — Portfolio (work in progress)</title>
-<meta name="description" content="Sonakshi Jamadhiar — designer working across UX research, product design, and human–AI interaction. Portfolio redesign in progress.">
+<title>Sonakshi Jamadhiar Portfolio</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@500;600;700&amp;family=Nunito:wght@400;600;700&amp;display=swap" rel="stylesheet">
-<style>
-body{margin:0;background:#FFF1F5;font-family:'Nunito',system-ui,sans-serif;color:#3B1F3A}
-a{color:#B4234A}a:hover{color:#7E1533}
-@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}
-@keyframes blink{0%,92%,100%{transform:scaleY(1)}95%{transform:scaleY(0.1)}}
-@keyframes wiggle{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg)}}
-@keyframes twinkle{0%,100%{opacity:.35;transform:scale(.8)}50%{opacity:1;transform:scale(1.1)}}
-@keyframes stripes{from{background-position:0 0}to{background-position:40px 0}}
-@keyframes roll{0%,100%{transform:translateY(0)}50%{transform:translateY(18px)}}
-.bot{animation:bob 3.2s ease-in-out infinite}
-.eye{transform-box:fill-box;transform-origin:center;animation:blink 4s infinite}
-.antenna{transform-box:fill-box;transform-origin:bottom center;animation:wiggle 1.8s ease-in-out infinite}
-.roller{animation:roll 1.6s ease-in-out infinite}
-.spark{animation:twinkle 2.4s ease-in-out infinite}
-.spark.d1{animation-delay:.6s}.spark.d2{animation-delay:1.2s}.spark.d3{animation-delay:1.8s}
-.bar{background-image:repeating-linear-gradient(-45deg,#F06C8B 0 10px,#F58AA3 10px 20px);background-size:40px 40px;animation:stripes 1.2s linear infinite}
-.pill:hover{transform:translateY(-2px)}
-@media (prefers-reduced-motion:reduce){.bot,.eye,.antenna,.roller,.spark,.bar{animation:none}}
-</style>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=Figtree:wght@400;500;600;700&family=Caveat:wght@600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
 </head>
 <body>
-<main style="min-height: 100vh; box-sizing: border-box; padding: 48px 24px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden">
+<div class="nav"><div class="wrap">
+  <a class="brand" href="#home"><i></i><span>Sonakshi Jamadhiar</span></a>
+  <nav aria-label="Main">
+    <button type="button" data-go="work">Work</button>
+    <button type="button" data-go="about" class="hide-s">About</button>
+    <button type="button" data-go="contact">Contact</button>
+  </nav>
+</div></div>
 
-<svg class="spark" aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" style="position: absolute; top: 12%; left: 10%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#FFC94D"></path></svg>
-<svg class="spark d1" aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" style="position: absolute; top: 22%; right: 14%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#9AD9C0"></path></svg>
-<svg class="spark d2" aria-hidden="true" width="22" height="22" viewBox="0 0 24 24" style="position: absolute; bottom: 16%; left: 16%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#C7B6FF"></path></svg>
-<svg class="spark d3" aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" style="position: absolute; bottom: 10%; right: 9%"><path d="M12 2l2.2 7.8L22 12l-7.8 2.2L12 22l-2.2-7.8L2 12l7.8-2.2z" fill="#F58AA3"></path></svg>
-<div aria-hidden="true" style="position: absolute; width: 420px; height: 420px; border-radius: 50%; background: #FFE3EC; top: -140px; right: -120px"></div>
-<div aria-hidden="true" style="position: absolute; width: 300px; height: 300px; border-radius: 50%; background: #E9FFF5; bottom: -110px; left: -90px"></div>
+<!-- ================= HOME ================= -->
+<main class="view" id="v-home">
+  <section class="hero"><div class="wrap">
+    <div>
+      <span class="eyebrow">Human–AI Interaction Designer</span>
+      <h1>I design for people who run <span class="mark m-pink">complicated</span> <span class="mark m-lav">tools.</span></h1>
+      <p class="lede">I'm Sonakshi. I trained as an ML engineer, worked as a product manager, and now design products where people meet technical systems: drone mapping, brain imaging and AI.</p>
+      <div class="cta">
+        <button class="btn" type="button" data-go="work">See my work</button>
+        <button class="btn ghost" type="button" data-go="contact">Say hello</button>
+      </div>
+    </div>
+    <div class="board" id="board" aria-hidden="true">
+      <span class="hint">psst, drag these</span>
+      <figure class="stk s1"><img src="assets/sticker-pen.svg" alt=""><figcaption>pixel pushing</figcaption></figure>
+      <figure class="stk s2"><img src="assets/sticker-chat.svg" alt=""><figcaption>humans + AI</figcaption></figure>
+      <figure class="stk s3"><img src="assets/sticker-controls.svg" alt=""><figcaption>tiny details</figcaption></figure>
+      <figure class="stk s4"><img src="assets/sticker-notes.svg" alt=""><figcaption>so many notes</figcaption></figure>
+      <figure class="stk s5"><img src="assets/sticker-hello.svg" alt=""><figcaption>hi!</figcaption></figure>
+    </div>
+  </div></section>
 
-<div style="position: relative; width: 100%; max-width: 720px; background: #FFFFFF; border: 3px solid #3B1F3A; border-radius: 32px; box-shadow: 10px 10px 0 #3B1F3A; padding: 40px 32px 36px; box-sizing: border-box; display: flex; flex-direction: column; align-items: center; gap: 20px; text-align: center">
+  <section class="band" id="work"><div class="wrap">
+    <div class="sec-head"><h2>Selected work</h2><p>Two case studies from specialist products.</p></div>
+    <div class="work">
+      <a class="proj" href="#geospatial" style="--tint:var(--mint)">
+        <div class="p-txt">
+          <div class="tags"><span class="tag">User research</span><span class="tag">Usability observation</span><span class="tag">UAT</span></div>
+          <h3>UX research and UAT testing for a geospatial platform</h3>
+          <p>I mapped how GIS analysts turn drone surveys into maps, watched where a new platform slowed them down, and built the testing process that caught bugs before release.</p>
+          <div class="stats"><div><b>11</b><span>research sessions</span></div><div><b>350</b><span>UAT test cases</span></div><div><b>7</b><span>workflow stages mapped</span></div></div>
+          <span class="go">Read the case study</span>
+        </div>
+        <div class="p-art"><img class="bare" src="assets/cover-maps.svg" alt="Illustration of contour rings, a dotted route and a map pin"></div>
+      </a>
+      <a class="proj" href="#neuroimaging" style="--tint:var(--lav)">
+        <div class="p-txt">
+          <div class="tags"><span class="tag">Domain immersion</span><span class="tag">Report design</span><span class="tag">Product requirements</span></div>
+          <h3>Clinical brain-mapping reports and product requirements</h3>
+          <p>At a neuroimaging startup I learned to read brain maps and tractography, designed the reports clinicians receive, and wrote the requirements engineering built from.</p>
+          <div class="stats"><div><b>26+</b><span>screens specified</span></div><div><b>7</b><span>workflows covered</span></div><div><b>3</b><span>imaging outputs learned</span></div></div>
+          <span class="go">Read the case study</span>
+        </div>
+        <div class="p-art"><img class="bare" src="assets/cover-minds.svg" alt="Illustration of a brain shape with connected colored nodes"></div>
+      </a>
+    </div>
+  </div></section>
 
-<div style="display: inline-flex; align-items: center; gap: 8px; background: #FFF6D6; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 14px; letter-spacing: 0.04em">
-<svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#3B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 20h20"></path><path d="M4 20l3-12h10l3 12"></path><path d="M9 8V5a3 3 0 0 1 6 0v3"></path></svg>
-A WORK IN PROGRESS
-</div>
+  <section class="band" id="about"><div class="wrap">
+    <div class="sec-head"><h2>About</h2></div>
+    <div class="about">
+      <div>
+        <p class="big">I sit between the people who build technical systems and the people who have to use them.</p>
+        <div class="rest">
+          <p>I studied computer science at PES University in Bangalore, where I built ML pipelines and co-authored an IEEE paper on cyclone prediction. Then I moved toward the people side: product management at a drone-mapping company and product design at a neuroimaging startup.</p>
+          <p>I'm now doing a master's in Human-Computer Interaction at the University of Maryland, where I'm a Grand Challenges Graduate Scholar in the AI and Knowledge Community cohort. I grew up between Pennsylvania and Bangalore, which taught me early that the same thing rarely reads the same way to two audiences.</p>
+        </div>
+        <div class="chips">
+          <span style="--c:var(--mint)">User research</span><span style="--c:var(--sky)">Usability testing</span><span style="--c:var(--lav)">Interaction design</span><span style="--c:var(--peach)">Information design</span><span style="--c:var(--pink)">Product requirements</span><span style="--c:var(--mint)">UAT</span><span style="--c:var(--sky)">Machine learning</span><span style="--c:var(--lav)">Figma</span><span style="--c:var(--peach)">Adobe InDesign</span>
+        </div>
+      </div>
+      <ul class="facts">
+        <li style="--c:var(--lav)"><i></i><div><b>MS, Human-Computer Interaction</b><span>University of Maryland</span></div></li>
+        <li style="--c:var(--mint)"><i></i><div><b>Grand Challenges Graduate Scholar</b><span>AI and Knowledge Community</span></div></li>
+        <li style="--c:var(--peach)"><i></i><div><b>Google APM program finalist</b><span>Product management</span></div></li>
+        <li style="--c:var(--pink)"><i></i><div><b>IEEE paper co-author</b><span>Cyclone prediction and air quality</span></div></li>
+        <li style="--c:var(--sky)"><i></i><div><b>BTech, Computer Science</b><span>PES University, Bangalore</span></div></li>
+      </ul>
+    </div>
+  </div></section>
 
-<svg class="bot" role="img" aria-label="A little robot in a hard hat painting the page" width="220" height="200" viewBox="0 0 220 200">
-<g class="antenna"><line x1="110" y1="44" x2="110" y2="22" stroke="#3B1F3A" stroke-width="4" stroke-linecap="round"></line><circle cx="110" cy="18" r="8" fill="#F06C8B" stroke="#3B1F3A" stroke-width="3"></circle></g>
-<path d="M58 62 Q110 18 162 62 Z" fill="#FFC94D" stroke="#3B1F3A" stroke-width="4" stroke-linejoin="round"></path>
-<rect x="50" y="58" width="120" height="12" rx="6" fill="#FFC94D" stroke="#3B1F3A" stroke-width="4"></rect>
-<rect x="56" y="70" width="108" height="82" rx="28" fill="#C7B6FF" stroke="#3B1F3A" stroke-width="4"></rect>
-<rect x="70" y="84" width="80" height="50" rx="20" fill="#FFFFFF" stroke="#3B1F3A" stroke-width="3"></rect>
-<ellipse class="eye" cx="94" cy="106" rx="6" ry="8" fill="#3B1F3A"></ellipse>
-<ellipse class="eye" cx="126" cy="106" rx="6" ry="8" fill="#3B1F3A"></ellipse>
-<circle cx="96" cy="103" r="2" fill="#FFFFFF"></circle><circle cx="128" cy="103" r="2" fill="#FFFFFF"></circle>
-<ellipse cx="82" cy="120" rx="6" ry="4" fill="#F7A6BA"></ellipse><ellipse cx="138" cy="120" rx="6" ry="4" fill="#F7A6BA"></ellipse>
-<path d="M104 120 Q110 126 116 120" fill="none" stroke="#3B1F3A" stroke-width="3" stroke-linecap="round"></path>
-<rect x="82" y="152" width="56" height="30" rx="12" fill="#9AD9C0" stroke="#3B1F3A" stroke-width="4"></rect>
-<circle cx="110" cy="167" r="5" fill="#F06C8B" stroke="#3B1F3A" stroke-width="2.5"></circle>
-<g class="roller">
-<line x1="164" y1="120" x2="190" y2="92" stroke="#3B1F3A" stroke-width="4" stroke-linecap="round"></line>
-<rect x="176" y="70" width="36" height="20" rx="8" fill="#F06C8B" stroke="#3B1F3A" stroke-width="4"></rect>
-</g>
-<path d="M50 128 Q34 132 30 146" fill="none" stroke="#3B1F3A" stroke-width="4" stroke-linecap="round"></path>
-<circle cx="30" cy="150" r="7" fill="#C7B6FF" stroke="#3B1F3A" stroke-width="3"></circle>
-<circle cx="164" cy="122" r="7" fill="#C7B6FF" stroke="#3B1F3A" stroke-width="3"></circle>
-</svg>
-
-<div style="display: flex; flex-direction: column; gap: 10px">
-<h1 style="margin: 0; font-family: 'Fredoka', sans-serif; font-weight: 700; font-size: clamp(36px, 6vw, 54px); line-height: 1.05; color: #3B1F3A">Hi, I'm Sonakshi.</h1>
-<p style="margin: 0; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: clamp(22px, 3.4vw, 28px); line-height: 1.2; color: #D6335E">I design for people, not just screens.</p>
-</div>
-
-<p style="margin: 0; max-width: 560px; font-size: 17px; line-height: 1.6; color: #5C4159">I'm a designer with a background in computer science, working across UX research, product design, and human–AI interaction. I'm interested in how people think, make decisions, navigate technology, and how we can make those experiences better.</p>
-
-<p style="margin: 0; max-width: 520px; font-size: 17px; line-height: 1.5; font-weight: 700; color: #3B1F3A">The website is currently under maintenance, we will be back very soon!</p>
-
-<div style="width: 100%; max-width: 480px; display: flex; flex-direction: column; gap: 8px">
-<div style="display: flex; justify-content: space-between; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 14px; color: #3B1F3A"><span>Still putting things together</span><span>72%</span></div>
-<div role="progressbar" aria-label="Portfolio progress" aria-valuemin="0" aria-valuemax="100" aria-valuenow="72" style="height: 22px; background: #FFF1F5; border: 3px solid #3B1F3A; border-radius: 999px; overflow: hidden">
-<div class="bar" style="height: 100%; width: 72%; border-right: 3px solid #3B1F3A; border-radius: 999px"></div>
-</div>
-</div>
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px">
-<span style="background: #FFE3EC; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px">UX research &amp; design</span>
-<span style="background: #EFE9FF; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px">Human–AI interaction</span>
-<span style="background: #E9FFF5; border: 2px solid #3B1F3A; border-radius: 999px; padding: 6px 14px; font-weight: 700; font-size: 14px">Things I'm exploring</span>
-</div>
-
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 12px; margin-top: 6px">
-<a class="pill" href="mailto:sonakshi1103@gmail.com" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; background: #3B1F3A; color: #FFFFFF; border: 3px solid #3B1F3A; border-radius: 999px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#FFFFFF" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="3"></rect><path d="M3 7l9 6 9-6"></path></svg>
-Get in touch
-</a>
-<a class="pill" href="https://www.linkedin.com/in/sonakshi-jamadhiar/" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; background: #FFFFFF; color: #3B1F3A; border: 3px solid #3B1F3A; border-radius: 999px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="4"></rect><path d="M8 11v5"></path><path d="M8 8v.01"></path><path d="M12 16v-5"></path><path d="M16 16v-3a2 2 0 0 0-4 0"></path></svg>
-LinkedIn
-</a>
-<a class="pill" href="Sonakshi_Jamadhiar_Resume.pdf" target="_blank" rel="noopener" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; background: #FFF6D6; color: #3B1F3A; border: 3px solid #3B1F3A; border-radius: 999px; font-family: 'Fredoka', sans-serif; font-weight: 600; font-size: 16px; text-decoration: none; transition: transform .15s">
-<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#3B1F3A" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 13h6"></path><path d="M9 17h4"></path></svg>
-Résumé
-</a>
-</div>
-
-<p style="margin: 0; font-size: 15px; color: #5C4159"><a href="mailto:sonakshi1103@gmail.com" style="font-weight: 700">sonakshi1103@gmail.com</a></p>
-
-<p style="margin: 4px 0 0; font-size: 13px; color: #6E5470">Curious about something? So am I.</p>
-</div>
+  <section class="band" id="contact"><div class="wrap">
+    <div class="contact">
+      <h2>Have a complicated tool? Let's make it kinder to use.</h2>
+      <p>I'm open to internships and collaborations in product design, UX research and human–AI interaction.</p>
+      <div class="links">
+        <a style="--c:var(--pink)" href="mailto:your.email@example.com">Email<small>your.email@example.com</small></a>
+        <a style="--c:var(--mint)" href="https://www.linkedin.com/in/your-profile">LinkedIn<small>linkedin.com/in/your-profile</small></a>
+        <a style="--c:var(--peach)" href="https://example.com/your-resume.pdf">Resume<small>Opens the PDF</small></a>
+      </div>
+    </div>
+  </div></section>
+  <footer><div class="wrap">Designed by Sonakshi Jamadhiar. All case-study visuals are recreated for illustration.</div></footer>
 </main>
+
+<!-- ================= GEOSPATIAL ================= -->
+<main class="view" id="v-geospatial" style="--tint:var(--mint);--tint2:var(--lav)">
+  <div class="cs-top"><div class="wrap">
+    <button class="back" type="button" data-home>← All work</button>
+    <h1>UX research and UAT testing for a geospatial platform</h1>
+    <p class="lede">Improving a geospatial platform through workflow research, observation and testing.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Product management intern</dd></div>
+      <div><dt>Users</dt><dd>GIS analysts</dd></div>
+      <div><dt>Methods</dt><dd>Interviews, observation, UAT</dd></div>
+      <div><dt>Scale</dt><dd>11 research sessions, 350 test cases</dd></div>
+    </dl>
+  </div></div>
+  <div class="wrap"><p class="note"><b>Confidentiality note.</b> To respect company confidentiality, this case study focuses on my research methods, processes and learnings. No proprietary company data, internal documents or confidential product information has been included. Any visuals or examples are recreated for illustrative purposes.</p></div>
+
+  <section class="cs-sec"><div class="wrap">
+    <header><span class="num">01</span><h2>Mapping the GIS analyst workflow</h2></header>
+    <div class="row"><h3>The challenge</h3><div><p>GIS analysts were moving from legacy geospatial tools to the company's new platform. Their work involved complex, multi-step processes, so the product team needed a clearer picture of the end-to-end workflow.</p></div></div>
+    <div class="row"><h3>Goal</h3><div><p>Understand the analysts' end-to-end workflow and the role each tool and output played within it.</p></div></div>
+    <div class="row"><h3>My approach</h3><div><p>I ran user research sessions using a master–apprentice approach, observing analysts as they worked and asking questions in context. I introduced myself as a PM intern who wanted to learn how drones are used to create orthomosaics. The analysts walked me through the process, and I asked clarifying questions wherever I got stuck.</p></div></div>
+    <figure class="fig"><div class="scroll"><img src="assets/01-interview-questions.svg" alt="The questions I asked, grouped into learning the basics, walking the workflow and finding decision points"></div><figcaption>Questions I asked during the sessions.</figcaption></figure>
+    <div class="row"><h3>Outcome</h3><div><p>The research produced a clearer picture of the analysts' workflow, dependencies and decision points. It gave the product team a stronger foundation for designing the new platform around real user processes.</p></div></div>
+    <div class="row"><h3>The workflow</h3><div><p>I mapped the workflow from drone data collection through photogrammetric processing, point cloud generation, DSMs, orthomosaics and GIS analysis.</p></div></div>
+    <figure class="fig"><div class="grid7">
+      <div class="cell"><img src="assets/geo-01-data-collection.svg" alt="Drone flying survey lines over terrain"><b><em>1</em> Data collection</b><span>Field operators fly drones over a survey area and capture overlapping aerial images.</span></div>
+      <div class="cell"><img src="assets/geo-02-positioning-reference-data.svg" alt="Ground control points on terrain"><b><em>2</em> Positioning &amp; reference data</b><span>Image geotags are refined using PPK data, while Ground Control Points provide surveyed reference locations.</span></div>
+      <div class="cell"><img src="assets/geo-03-photogrammetric-processing.svg" alt="Two overlapping photos with matched points"><b><em>3</em> Photogrammetric processing</b><span>Overlapping images are aligned using feature matching and reference data.</span></div>
+      <div class="cell"><img src="assets/geo-04-point-cloud.svg" alt="Point cloud colored by elevation"><b><em>4</em> Point cloud generation</b><span>The imagery becomes a dense 3D point cloud of terrain and visible objects.</span></div>
+      <div class="cell"><img src="assets/geo-05-surface-model-dsm.svg" alt="Surface model colored by elevation"><b><em>5</em> Surface modeling</b><span>The point cloud generates outputs such as a Digital Surface Model (DSM).</span></div>
+      <div class="cell"><img src="assets/geo-06-orthomosaic.svg" alt="Aerial map with scale bar and north arrow"><b><em>6</em> Orthomosaic generation</b><span>Images are orthorectified and combined into a geographically accurate aerial map.</span></div>
+      <div class="cell"><img src="assets/geo-07-gis-analysis-qc.svg" alt="Map with measurements and verified checkpoints"><b><em>7</em> GIS analysis &amp; quality checks</b><span>Analysts review outputs, verify accuracy, take measurements and prepare deliverables.</span></div>
+    </div><figcaption>The seven stages of the GIS analyst workflow.</figcaption></figure>
+  </div></section>
+
+  <section class="cs-sec"><div class="wrap">
+    <header><span class="num">02</span><h2>Observing real-world product usage</h2></header>
+    <div class="row"><h3>The challenge</h3><div><p>As GIS analysts began using the new platform, the product team needed to understand how it fit into existing workflows, what encouraged adoption, and where the experience created friction during real tasks.</p></div></div>
+    <div class="row"><h3>Goal</h3><div><p>Observe analysts using the platform to identify usability issues, workarounds and points of confusion.</p></div></div>
+    <div class="row"><h3>My approach</h3><div><p>I conducted multiple observation sessions in the GIS lab while analysts completed their day-to-day work. I focused on understanding:</p>
+      <ul><li>How analysts incorporated the new platform into their existing workflows.</li><li>When and why they switched back to legacy tools.</li><li>Where they hesitated, experienced friction or encountered bugs.</li><li>Which platform features they relied on most.</li></ul>
+      <p>I documented usability issues and bugs as they surfaced and communicated technical problems directly to the engineering team.</p></div></div>
+    <div class="row"><h3>Key findings</h3><div class="find">
+      <article><h4>1. Familiarity influenced adoption</h4><p>Some analysts were hesitant to move because they were comfortable with their existing tools, even when the new platform offered similar capabilities. With active project deadlines, they had not had time to try it.</p></article>
+      <article><h4>2. Simplicity was a strength</h4><p>Analysts who had adopted the platform were happy with its simplicity, especially the processing interface.</p></article>
+      <article><h4>3. Hybrid workflows remained necessary</h4><p>Analysts switched between the new platform and older tools, relying on legacy tools for capabilities that were still in development.</p></article>
+      <article><h4>4. Specific issues affected efficiency</h4><p>The sessions surfaced bottlenecks, including bugs I documented and reported to engineering immediately, and the four opportunities shown here.</p></article>
+    </div></div>
+    <figure class="fig"><div class="grid4">
+      <div class="cell"><img src="assets/issue-1-volume-calculation.svg" alt="A hand-drawn area outline next to one that follows the hill's elevation"><b>Volume calculation</b><span>Users wanted the area of interest to be selected automatically based on elevation levels.</span></div>
+      <div class="cell"><img src="assets/issue-2-interface-responsiveness.svg" alt="A button being clicked repeatedly with no response"><b>Interface responsiveness</b><span>Slow response to clicks interrupted interactions.</span></div>
+      <div class="cell"><img src="assets/issue-3-elevation-profile.svg" alt="Two charts, one with similar line colors and one with distinct colors"><b>Elevation profile</b><span>Graph colors were too similar. Users wanted more vibrant colors to tell data series apart.</span></div>
+      <div class="cell"><img src="assets/issue-4-map-downloads.svg" alt="An export dialog with a requested scale selector"><b>Map downloads</b><span>Users wanted to choose the zoom scale of exported maps.</span></div>
+    </div><figcaption>Usability issues observed, recreated as illustrations.</figcaption></figure>
+    <div class="row"><h3>Outcome</h3><div><p>The sessions showed that platform adoption depended on more than feature availability. Familiarity, project deadlines, usability and workflow compatibility also shaped analysts' willingness to transition.</p><p>I documented the issues identified and communicated bugs to engineering, helping the team understand where users experienced friction during real work.</p></div></div>
+  </div></section>
+
+  <section class="cs-sec"><div class="wrap">
+    <header><span class="num">03</span><h2>Strengthening quality through UAT testing</h2></header>
+    <div class="row"><h3>The challenge</h3><div><p>The analytics platform was being developed rapidly, which meant new features frequently introduced bugs and edge cases. These needed to be caught in the UAT environment before changes were pushed to production.</p><p>The team needed a more consistent way to validate functionality before release and to avoid high-priority issues surfacing late in the release cycle.</p></div></div>
+    <div class="row"><h3>Goal</h3><div><p>Create a structured UAT process to systematically test core workflows, document issues, and help the team prioritize bugs based on their impact on users and day-to-day work.</p></div></div>
+    <div class="row"><h3>My approach</h3><div><p>I helped establish a systematic testing process built around two components: a test-case sheet for finding issues, and a priority matrix for triaging them.</p></div></div>
+    <div class="row"><h3>1. Test-case repository</h3><div><p>I created and maintained a structured test-case sheet to document:</p>
+      <ul><li>Features and workflows being tested.</li><li>Test steps and expected behavior.</li><li>Actual results and pass/fail status.</li><li>Bugs, reproduction steps and supporting evidence.</li><li>Issue status and follow-up testing.</li></ul>
+      <p>This gave the product and engineering teams a consistent way to validate functionality, track test coverage and follow issues across releases.</p></div></div>
+    <figure class="fig"><div class="scroll"><img src="assets/uat-1-test-case-sheet.svg" alt="The test-case sheet format with scenario, test number, test case, steps, input data, expected behaviour, result and comments columns"></div><figcaption>The test-case sheet format I created, shown with example content.</figcaption></figure>
+    <div class="row"><h3>2. Prioritization matrix</h3><div><p>I used an urgency–importance matrix to separate critical failures from lower-impact usability issues and enhancements. It gave the team a simple framework for discussing which issues needed immediate attention and which could be addressed later.</p></div></div>
+    <div class="grid2">
+      <figure class="fig"><img src="assets/uat-2-priority-matrix.svg" alt="Priority matrix: P0 very high, fix now; P1 high, plan next release; P2 medium, schedule by impact; P3 low, backlog"><figcaption>The bug prioritization matrix.</figcaption></figure>
+      <figure class="fig"><img src="assets/uat-3-testing-loop.svg" alt="A loop: test, log bug, prioritize, fix, retest, then release when tests pass"><figcaption>How the sheet and the matrix fit into each release.</figcaption></figure>
+    </div>
+    <div class="row"><h3>Outcome</h3><div><p>The structured UAT process helped catch high-priority issues earlier, improved visibility into test coverage, and gave the team a clearer, more consistent way to triage bugs.</p><p>It also reduced last-minute pressure on engineering before release by making issues easier to document, reproduce and address.</p></div></div>
+    <a class="next" href="#neuroimaging"><div><small>Next case study</small><strong>Clinical brain-mapping reports and product requirements</strong></div><span>→</span></a>
+  </div></section>
+  <footer><div class="wrap">Designed by Sonakshi Jamadhiar. All case-study visuals are recreated for illustration.</div></footer>
+</main>
+
+<!-- ================= NEUROIMAGING ================= -->
+<main class="view" id="v-neuroimaging" style="--tint:var(--lav);--tint2:var(--mint)">
+  <div class="cs-top"><div class="wrap">
+    <button class="back" type="button" data-home>← All work</button>
+    <h1>Clinical brain-mapping reports and product requirements</h1>
+    <p class="lede">Learning a clinical neuroimaging domain, designing brain-mapping reports, and defining product requirements for a clinical neuroimaging platform.</p>
+    <dl class="meta">
+      <div><dt>Role</dt><dd>Product design intern</dd></div>
+      <div><dt>Users</dt><dd>Radiologists and hospital teams</dd></div>
+      <div><dt>Tools</dt><dd>MRIcroGL, MRView, Adobe InDesign</dd></div>
+      <div><dt>Scale</dt><dd>26+ screens specified</dd></div>
+    </dl>
+    <figure class="cover"><img src="assets/neuro-0-cover.svg" alt="A clinical report layout beside a brain viewer showing tractography and network activity"></figure>
+  </div></div>
+  <div class="wrap"><p class="note"><b>Confidentiality note.</b> To respect company confidentiality, this case study focuses on my methods, processes and learnings. No proprietary company data, internal documents or confidential product information has been included. Any visuals or examples are recreated for illustrative purposes.</p></div>
+
+  <section class="cs-sec"><div class="wrap">
+    <header><span class="num">01</span><h2>Building neuroimaging domain understanding</h2></header>
+    <div class="row"><h3>The challenge</h3><div><p>I was designing for a highly specialized clinical neuroimaging product. Before making design decisions, I needed to understand what the brain maps, tractography and other outputs actually represented.</p></div></div>
+    <div class="row"><h3>Goal</h3><div><p>Build enough understanding of the neuroimaging workflow and its outputs to design for clinical users, without treating the data as generic interface content.</p></div></div>
+    <div class="row"><h3>My approach</h3><div><p>I worked directly with fMRI-based neuroimaging data, using MRIcroGL and MRView to inspect brain maps and tractography. Through this hands-on work, I learned how different neuroimaging outputs are represented and interpreted.</p></div></div>
+    <figure class="fig"><div class="scroll"><img src="assets/neuro-1-domain-understanding.svg" alt="Three panels: structural MRI, functional network maps, and tractography colored by direction"></div><figcaption>The three kinds of output I learned to read.</figcaption></figure>
+    <div class="row"><h3>Outcome</h3><div><p>This understanding informed my later product and report-design decisions. It let me make choices about grouping, labeling and hierarchy based on how clinicians read the outputs.</p></div></div>
+  </div></section>
+
+  <section class="cs-sec"><div class="wrap">
+    <header><span class="num">02</span><h2>Designing clinical brain-mapping reports</h2></header>
+    <div class="row"><h3>The challenge</h3><div><p>Brain-mapping reports contained highly technical information: tract visualizations, network maps, statistical measures, radiologist interpretation and explanatory material. All of it needed to be presented coherently to clinical users.</p></div></div>
+    <div class="row"><h3>Goal</h3><div><p>Design report layouts that made complex neuroimaging information easier to navigate and interpret.</p></div></div>
+    <div class="row"><h3>My approach</h3><div><p>I designed clinical brain-mapping reports in Adobe InDesign. I established the information hierarchy and layouts for tract visualizations, network maps, z-scores, radiologist impression fields and contextual explainers.</p></div></div>
+    <figure class="fig"><div class="scroll"><img src="assets/neuro-2-report-design.svg" alt="The report layout with seven numbered design decisions"></div><figcaption>The report layout, recreated, with the reasoning behind its order and grouping.</figcaption></figure>
+    <figure class="fig"><div class="scroll"><img src="assets/neuro-2b-tractography-module.svg" alt="Close-up of the tractography module: tract selector, two brain views, left and right measures, and the radiologist's impression field"></div><figcaption>A closer look at one module: tractography.</figcaption></figure>
+  </div></section>
+
+  <section class="cs-sec"><div class="wrap">
+    <header><span class="num">03</span><h2>Defining product requirements</h2></header>
+    <div class="row"><h3>The challenge</h3><div><p>The platform had a large number of interconnected workflows across different user roles. These included hospital administration, member management, studies, onboarding, patient uploads and neuroimaging outputs.</p></div></div>
+    <div class="row"><h3>Goal</h3><div><p>Create clear product requirements that translated the interface designs into expected behavior for engineering.</p></div></div>
+    <div class="row"><h3>My approach</h3><div><p>I defined user stories and acceptance criteria across 26+ screens. For each screen, I documented what it should display, how users should move through the flow, what actions should be available, and how the system should respond.</p>
+      <p>The requirements covered hospital administration, inviting and managing members, study setup, onboarding, DICOM upload, patient case management, and output selection for network maps and tractography.</p></div></div>
+    <figure class="fig"><div class="scroll"><img src="assets/neuro-3-requirements.svg" alt="26 screens across six flows, with one recreated screen and its six acceptance criteria"></div><figcaption>One screen with its acceptance criteria, recreated with placeholder content.</figcaption></figure>
+    <div class="row"><h3>Outcome</h3><div><p>I created a shared requirements reference that gave engineering clearer implementation expectations across a complex set of screens and user flows.</p></div></div>
+    <div class="row"><h3>How it connects</h3><div><p>The work followed one line: understand the neuroimaging domain, design the clinical reports, then define the product requirements. Knowing what the outputs meant shaped how the reports were organized, and designing the reports and screens made it possible to specify how the product should behave.</p></div></div>
+    <a class="next" href="#geospatial"><div><small>Next case study</small><strong>UX research and UAT testing for a geospatial platform</strong></div><span>→</span></a>
+  </div></section>
+  <footer><div class="wrap">Designed by Sonakshi Jamadhiar. All case-study visuals are recreated for illustration.</div></footer>
+</main>
+
+<script src="script.js"></script>
 </body>
 </html>
